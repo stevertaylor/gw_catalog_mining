@@ -87,7 +87,7 @@
 										<div class="row 200%">
 
 											<div class="6u 12u$(medium)">
-												<span class="image fit"><img src="images/pta.jpg" alt="" /></span>
+												<span class="image fit"><img src="images/hierarchical_inference.png" alt="" /></span>
 												<p><b>Image</b>: gravitational-wave detection by pulsar timing. (Credit: NRAO)</p>
 											</div>
 
@@ -185,7 +185,7 @@
 										</div>
 
 										<div class="6u 12u$(medium)">
-											<span class="image fit"><img src="images/nano11yr_pulsardist.png" alt="" /></span>
+											<span class="image fit"><img src="images/compas_results.png" alt="" /></span>
 												<p><b>Image</b>: sky map of NANOGrav pulsars.</p>
 										</div>
 
@@ -203,7 +203,7 @@
 										<div class="row 200%">
 
 											<div class="6u 12u$(medium)">
-												<span class="image fit"><img src="images/hcf_uls.png" alt="" /></span>
+												<span class="image fit"><img src="images/abse_trainingdata.png" alt="" /></span>
 													<p><b>Image</b>: Upper limit on a power-law stochastic background, as a function of spectral slope, and for different ephemeris choices.</p>
 
 											</div>
@@ -302,7 +302,7 @@
 												</div>
 
 												<div class="6u 12u$(medium)">
-													<span class="image fit"><img src="images/gwbamp_posterior.png" alt="" /></span>
+													<span class="image fit"><img src="images/abse_results.png" alt="" /></span>
 													<p><b>Image</b>: Bayesian posterior probability density
 													for the GWB amplitude at frequency of 1/year. Dashed lines
 													correspond to adopting SSE models without
@@ -314,200 +314,6 @@
 
 										</section>
 
-
-										<!-- Section 4 -->
-											<section>
-												<header class="major">
-													<h2>Supermassive Black-hole Binaries</h2>
-												</header>
-
-												<div class="row 200%">
-
-													<div class="6u 12u$(medium)">
-														<span class="image fit"><img src="images/smbh.png" alt="" /></span>
-														<p><b>Image</b>: (Top) Bayesian posterior probability distribution for
-															galactic-core stellar density (y axis) and SMBHB eccentricity
-															(x axis), at several fixed values of the y-intercept of
-															the BH&ndash;bulge mass relationship.
-															(Bottom) Translation of probability distribution to strain
-															spectra. Larger y-intercept values give larger spectral amplitudes,
-															since they require stronger environmental driving to attenuate the spectrum
-															at low frequencies, and thereby avoid inconsistencies with the data.
-													</div>
-
-													<div class="6u 12u$(medium)">
-
-														<ul>
-															<li>
-																A GWB can be created from the incoherent superposition
-																	of GW signals from inspiraling <b>SMBHBs</b> throughout
-																	the Universe. These binaries <b>form after massive galaxies
-																	merge</b>, when their resident SMBHs sink together to the galactic nucleus and
-																	form a bound system.
-															</li>
-
-															<li>
-																The fiducial characteristic-strain spectrum from
-																	such a SMBHB population is a <b>power law with &minus;2/3
-																	spectral index</b>. However, <b>many processes can influence the amplitude and shape of this spectrum</b>.
-																</h4>
-															</li>
-
-															<li>
-																SMBHBs can remain strongly coupled to their galactic
-																	environments even while they emit GWs at frequencies in the PTA sensitivity band.
-																	This causes the <b>spectrum to deviate from a power law</b>. Binary eccentricity can also cause spectral
-																	attenuation as power is distributed to higher
-																	orbital-frequency harmonics.
-															</li>
-
-															<li>
-																We train a Gaussian Process to interpolate over
-																	GWB spectra from a grid of binary population simulations. We can the derive <b>joint constraints on BH&ndash;galaxy scaling
-																	relationships, galactic-core stellar densities, and typical SMBHB eccentricities</b>. This modeling scheme can be expanded to include many other dynamical and demographic properties.
-															</li>
-
-														</ul>
-
-													</div>
-
-												</div>
-
-
-											</section>
-
-											<!-- Section 5 -->
-												<section>
-													<header class="major">
-														<h2>Cosmic Strings</h2>
-													</header>
-
-													<div class="row 200%">
-
-														<div class="6u 12u$(medium)">
-
-															<ul>
-																<li>
-																	Cosmic strings are <b>topological defects in
-																		space-time</b> that could have formed when the
-																		early Universe underwent a phase transition.
-																		Networks of these long strings can intersect,
-																		chopping off small loops that vibrate
-																		relativistically and decay via GW emission.
-																		Higher string tensions (large x-axis values
-																		in the image here) yield stronger GW emission.
-																</li>
-
-																<li>
-																		The strings predicted in <b>quantum field theory</b>
-																		always intersect when they meet. In contrast,
-																		<b>cosmic superstrings</b> do not always intersect
-																		when they meet in 3 dimensions because they may
-																		miss each other in higher compactified spatial
-																		dimensions and/or because they interact probabilistically.
-																		Their intersection probabilities can therefore be less
-																		than unity and are shown on the y-axis in the image here.
-																</li>
-
-																<li>
-																	We train a Gaussian Process to interpolate over spectra
-																		from the <a href="http://cosmos.phy.tufts.edu/cosmic-string-spectra/">most up-to-date cosmic-string simulations</a>,
-																		allowing us to <b>constrain string tension at different
-																		intersection probabilities</b>. Our modeling scheme and constraints
-																		improve on the <a href="https://arxiv.org/abs/1508.03024">NANOGrav 9-year</a>
-																		and <a href="https://arxiv.org/abs/1504.03692">most recent EPTA</a> results.
-																	</h4>
-																</li>
-
-																<li>
-																	Our <b>upper limit on the cosmic-string tension</b>
-																		at an intersection probability of one is <b>5.3 x 10<sup>&minus;11</sup></b>.
-																		At this level, cosmic-string signatures are unlikely
-																		to be seen in the CMB power spectrum or through other means.
-																		PTAs continue to be the <b>best tool for probing
-																		cosmic strings</b>.
-																	</h4>
-																</li>
-
-															</ul>
-
-														</div>
-
-														<div class="6u 12u$(medium)">
-															<span class="image fit"><img src="images/cosmicstrings.png" alt="" /></span>
-															<p><b>Image</b>: The solid black line enclosing a blue region
-																denotes the parameter space excluded by our analysis
-																to 95% credibility.
-																Dashed lines enclosing a blue region show similar
-																constraints for the <a href="https://arxiv.org/abs/1508.03024">NANOGrav 9-year</a> analysis, while
-																the <a href="https://arxiv.org/abs/1504.03692">most recent EPTA</a> result is indicated at p=1.
-
-															</body>
-														</div>
-
-													</div>
-
-
-												</section>
-
-												<!-- Section 6 -->
-													<section>
-														<header class="major">
-															<h2>Primordial Gravitational Waves</h2>
-														</header>
-
-														<div class="row 200%">
-
-															<div class="6u 12u$(medium)">
-																<span class="image fit"><img src="images/relicgws.png" alt="" /></span>
-																<p><b>Table</b>: 95% upper limits on the amplitude of a
-																	primordial GWB (at a frequency of 1/year).
-																	Different models for the inflationary equation
-																	of state are assumed depending on whether matter, radiation,
-																	or kinetic-energy dominated the Universe at that time. The analysis is
-																	repeated for different SSE models, and under BayesEphem.
-															</div>
-
-															<div class="6u 12u$(medium)">
-
-																<ul>
-																	<li>
-																		<b>Quantum space-time fluctuations in
-																			the very early Universe</b>
-																			may have been amplified to cosmological scales
-																			by the process of inflation. This creates a
-																			background of primordial GWs.
-																	</li>
-
-																	<li>
-																			Current experiments search for signatures of this
-																			background in the polarization properties of the
-																			CMB, through so-called <b>B modes</b>, at very
-																			long wavelengths (of order the size of the
-																			Universe when the CMB was formed).
-																			GW instruments such as PTAs may allow the
-																			detection of these primordial GWs at much
-																			shorter wavelengths, providing unparalleled
-																			insight into early-Universe cosmology.
-																	</li>
-
-																	<li>
-																		We place limits on the amplitude of a GWB
-																			(at a frequency of 1/year) for a variety of assumptions on the dominant content of the Universe during inflation. <b>For radiation-dominated inflation, the
-																			Hubble-independent energy-density of the
-																			Universe</b> (as a fraction of closure density) is constrained to <b>3.4 x 10<sup>&minus;10</sup></b>.
-																	</li>
-
-																</ul>
-
-															</div>
-
-														</div>
-
-
-													</section>
-
-
 													<!-- Section 7 -->
 														<section>
 															<header class="major">
@@ -517,124 +323,19 @@
 															<div class="row 200%">
 
 																<div class="6u 12u$(medium)">
-																	<ul>
-																		<li>
-The <b>NANOGrav Collaboration</b>:
-Z. Arzoumanian<!--<sup>1</sup>-->,
-P. T. Baker<!--<sup>2,3</sup>-->,
-A. Brazier<!--<sup>4</sup>-->,
-S. Burke-Spolaor<!--<sup>2,3</sup>-->,
-S. J. Chamberlin<!--<sup>5</sup>-->,
-S. Chatterjee<!--<sup>4</sup>-->,
-B. Christy<!--<sup>6</sup>-->,
-J. M. Cordes<!--<sup>4</sup>-->,
-N. J. Cornish<!--<sup>7</sup>-->,
-F. Crawford<!--<sup>8</sup>-->,
-H. Thankful Cromartie<!--<sup>9</sup>-->,
-K. Crowter<!--<sup>10</sup>-->,
-M. DeCesar<!--<sup>&dagger;11</sup>-->,
-P. B. Demorest<!--<sup>12</sup>-->,
-T. Dolch<!--<sup>13</sup>-->,
-J. A. Ellis<!--<sup>&dagger;2,3</sup>-->
-R. D. Ferdman<!--<sup>14</sup>-->,
-E. Ferrara<!--<sup>15</sup>-->,
-W. M. Folkner<!--<sup>16</sup>-->,
-E. Fonseca<!--<sup>17</sup>-->,
-N. Garver-Daniels<!--<sup>2,3</sup>-->,
-P. A. Gentile<!--<sup>2,3</sup>-->,
-R. Haas<!--<sup>18</sup>-->,
-J. S. Hazboun<!--<sup>&dagger;19,20</sup>-->,
-E. A. Huerta<!--<sup>18</sup>-->,
-K. Islo<!--<sup>21</sup>-->,
-F. Jenet<!--<sup>20</sup>-->,
-G. Jones<!--<sup>21</sup>-->,
-M. L. Jones<!--<sup>2,3</sup>-->,
-D. L. Kaplan<!--<sup>21</sup>-->,
-V. M. Kaspi<!--<sup>17</sup>-->,
-M. T. Lam<!--<sup>&dagger;2,3</sup>-->,
-T. J. W. Lazio<!--<sup>16,23</sup>-->,
-L. Levin<!--<sup>24</sup>-->,
-A. N. Lommen<!--<sup>25</sup>-->,
-D. R. Lorimer<!--<sup>2,3</sup>-->,
-J. Luo<!--<sup>20</sup>-->,
-R. S. Lynch<!--<sup>26</sup>-->,
-D. R. Madison<!--<sup>ddagger;27</sup>-->,
-M. A. McLaughlin<!--<sup>2,3</sup>-->,
-S. T. McWilliams<!--<sup>2,3</sup>-->,
-C. M. F. Mingarelli<!--<sup>28</sup>-->,
-C. Ng<!--<sup>10</sup>-->,
-D. J. Nice<!--<sup>11</sup>-->,
-R. S. Park<!--<sup>16</sup>-->,
-T. T. Pennucci<!--<sup>&dagger;2,3,29,30</sup>-->,
-N. S. Pol<!--<sup>2,3</sup>-->,
-S. M. Ransom<!--<sup>9,27</sup>-->,
-P. S. Ray<!--<sup>31</sup>-->,
-A. Rasskazov<!--<sup>29,30</sup>-->,
-X. Siemens<!--<sup>21</sup>-->,
-J. Simon<!--<sup>16</sup>-->,
-R. Spiewak<!--<sup>21,33</sup>-->,
-I. H. Stairs<!--<sup>10</sup>-->,
-D. R. Stinebring<!--<sup>34</sup>-->,
-K. Stovall<!--<sup>&dagger;35</sup>-->,
-J. Swiggum<!--<sup>&dagger;21</sup>-->,
-S. R. Taylor<!--<sup>&dagger;23,16</sup>-->,
-M. Vallisneri<!--<sup>16,23</sup>-->,
-S. Vigeland<!--<sup>&dagger;21</sup>-->,
-W. W. Zhu<!--<sup>36,37</sup>-->
-																		</li>
-
-<!--																		<li>
-<sup>1</sup>Center for Research and Exploration in Space Science and Technology and X-Ray Astrophysics Laboratory, NASA Goddard Space Flight Center, Code 662, Greenbelt, MD 20771, USA<br/>
-<sup>2</sup>Department of Physics and Astronomy, West Virginia University, P.O.~Box 6315, Morgantown, WV 26506, USA<br/>
-<sup>3</sup>Center for Gravitational Waves and Cosmology, West Virginia University, Chestnut Ridge Research Building, Morgantown, WV 26505, USA<br/>
-<sup>4</sup>Department of Astronomy, Cornell University, Ithaca, NY 14853, USA<br/>
-<sup>5</sup>Department of Astronomy and Astrophysics, Pennsylvania State University, University Park, PA 16802, USA<br/>
-<sup>6</sup>Notre Dame of Maryland University, 4701 N.~Charles Street, Baltimore, MD 21210, USA<br/>
-<sup>7</sup>Department of Physics, Montana State University, Bozeman, MT 59717, USA<br/>
-<sup>8</sup>Department of Physics and Astronomy, Franklin and Marshall College, P.O.~Box 3003, Lancaster, PA 17604, USA<br/>
-<sup>9</sup>University of Virginia, Department of Astronomy, P.O.~Box 400325, Charlottesville, VA 22904, USA<br/>
-<sup>10</sup>Department of Physics and Astronomy, University of British Columbia, 6224 Agricultural Road, Vancouver, BC V6T 1Z1, Canada<br/>
-<sup>11</sup>Department of Physics, Lafayette College, Easton, PA 18042, USA<br/>
-<sup>12</sup>National Radio Astronomy Observatory, 1003 Lopezville Rd., Socorro, NM 87801, USA<br/>
-<sup>13</sup>Department of Physics, Hillsdale College, 33 E.~College Street, Hillsdale, Michigan 49242, USA<br/>
-<sup>14</sup>Department of Physics, University of East Anglia, Norwich, UK<br/>
-<sup>15</sup>NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA<br/>
-<sup>16</sup>Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA 91109, USA<br/>
-<sup>17</sup>Department of Physics, McGill University, 3600  University St., Montreal, QC H3A 2T8, Canada<br/>
-<sup>18</sup>NCSA, University of Illinois at Urbana-Champaign, Urbana, Illinois 61801, USA<br/>
-<sup>19</sup>University of Washington Bothell, 18115 Campus Way NE, Bothell, WA 98011, USA<br/>
-<sup>20</sup>Center for Advanced Radio Astronomy, University of Texas Rio Grande Valley, Brownsville, TX 78520, USA<br/>
-<sup>21</sup>Center for Gravitation, Cosmology and Astrophysics, Department of Physics, University of Wisconsin-Milwaukee, P.O.~Box 413, Milwaukee, WI 53201, USA<br/>
-<sup>22</sup>Department of Physics, Columbia University, New York, NY 10027, USA<br/>
-<sup>23</sup>Theoretical AstroPhysics Including Relativity (TAPIR), MC 350-17, California Institute of Technology, Pasadena, California 91125, USA<br/>
-<sup>24</sup>Jodrell Bank Centre for Astrophysics, University of Manchester, Manchester, M13 9PL, United Kingdom<br/>
-<sup>25</sup>Department of Physics and Astronomy, Haverford College, Haverford, PA 19041, USA<br/>
-<sup>26</sup>Green Bank Observatory, P.O.~Box 2, Green Bank, WV 24944, USA<br/>
-<sup>27</sup>National Radio Astronomy Observatory, 520 Edgemont Road, Charlottesville, VA 22903, USA<br/>
-<sup>28</sup>Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA<br/>
-<sup>29</sup>Institute of Physics, E&ouml;tv&ouml;s Lor&aacute;nd University, P&aacute;zm&aacute;ny P. s. 1/A, 1117 Budapest, Hungary<br/>
-<sup>30</sup>Hungarian Academy of Sciences MTA-ELTE Extragalactic Astrophysics Research Group, 1117 Budapest, Hungary<br/>
-<sup>31</sup>Naval Research Laboratory, Washington DC 20375, USA<br/>
-<sup>32</sup>School of Physics and Astronomy and Center for Computational Relativity and Gravitation, Rochester Institute of Technology, Rochester, NY 14623, USA<br/>
-<sup>33</sup>Centre for Astrophysics and Supercomputing, Swinburne University of Technology, PO Box 218, Hawthorn VIC 3122, Australia<br/>
-<sup>34</sup>Department of Physics and Astronomy, Oberlin College, Oberlin, OH 44074, USA<br/>
-<sup>35</sup>Department of Physics and Astronomy, University of New Mexico, Albuquerque, NM 87131, USA<br/>
-<sup>36</sup>National Astronomical Observatories, Chinese Academy of Science, 20A Datun Road, Chaoyang District, Beijing 100012, China<br/>
-<sup>37</sup>Max Planck Institute for Radio Astronomy, Auf dem H&uuml;gel 69, D-53121 Bonn, Germany<br/>
-<sup>&dagger;</sup> NANOGrav Physics Frontiers Center Postdoctoral Fellow<br/>
-<sup>&ddagger;</sup> Jansky Fellow<br/>
-																		</small></li> -->
-
+																	<!--<ul>
 																	<li><b>Contact</b>:
-<a href="mailto:srtaylor@caltech.edu?Subject=NANOGrav%2011-year%20Paper" target="_top">Dr. Stephen R. Taylor</a> (corresponding author),
-<a href="mailto:maura.mclaughlin@mail.wvu.edu?Subject=NANOGrav%2011-year%20Paper" target="_top">Prof. Maura McLaughlin</a> (NANOGrav chair).</li>
+<a href="mailto:srtaylor@caltech.edu?Subject=Mining%20GW%20Catalogs" target="_top">Dr. Stephen R. Taylor</a>,
+<a href="mailto:dgerosa@caltech.edu?Subject=Mining%20GW%20Catalogs" target="_top">Dr. Davide Gerosa</a>.</li>
 
-																	</ul>
+</ul>-->
+																<p><a href="mailto:srtaylor@caltech.edu?Subject=Mining%20GW%20Catalogs" target="_top">Dr. Stephen R. Taylor</a></p>
+																<span class="image fit"><img src="images/stephen_taylor.jpg" alt="" /></span>
 																</div>
 
 																<div class="6u 12u$(medium)">
-																	<span class="image fit"><img src="images/nano_people.jpg" alt="" /></span>
-																	<p>The NANOGrav Collaboration at the 2017 Fall meeting in Lafayette College, PA
+																	<p><a href="mailto:dgerosa@caltech.edu?Subject=Mining%20GW%20Catalogs" target="_top">Dr. Davide Gerosa</a></p>
+																	<span class="image fit"><img src="images/davide_gerosa.png" alt="" /></span>
 																</div>
 
 															</div>
