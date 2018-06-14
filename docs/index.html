@@ -64,7 +64,8 @@
 											framework to <b>extract the underlying astrophysical origins of
 											systems detected by LIGO, Virgo, etc</b>. The method is fast,
 											easily expanded with additional simulations, and can be
-											adapted for training on arbitrary population synthesis codes.
+											adapted for training on arbitrary population synthesis codes,
+											and <b>detectors like LISA</b>.
 										</p>
 										<ul class="actions">
 											<li><a href="https://arxiv.org/" class="button medium">Read paper</a></li>
@@ -81,53 +82,56 @@
 								<!-- Section 0 -->
 									<section>
 										<header class="major">
-											<h2>Searching for Gravitational Waves Using Pulsars</h2>
+											<h2>Gravitational Wave Catalogs</h2>
 										</header>
 
 										<div class="row 200%">
 
 											<div class="6u 12u$(medium)">
-												<span class="image fit"><img src="images/hierarchical_inference.png" alt="" /></span>
-												<p><b>Image</b>: gravitational-wave detection by pulsar timing. (Credit: NRAO)</p>
+												<span class="image fit"><img src="images/ligo_bbhs.png" alt="" /></span>
+												<p><b>Image</b>: Detected black-hole binaries [Credit: LSC/LIGO/Caltech/Sonoma State (Aurore Simonnet)]</p>
 											</div>
 
 											<div class="6u 12u$(medium)">
 												<ul>
 													<li>
-														Precision timing of millisecond pulsars over years
-															and decades allows us to build <b>models of radio-pulse
-															arrival times of incredible accuracy</b>. These models
-															account for the pulsar's spin period, its evolution, the dispersion of radio pulses in
-															the interstellar medium, and many other effects.
+														The <b>Advanced Laser Interferometer Gravitational-wave
+														Observatory (aLIGO)</b> has detected five binary black-hole
+														(BBH) mergers and one double neutron star (DNS) merger
+														since becoming operational in 2015, with <b>Advanced
+														Virgo (AdvVirgo)</b> joining the hunt in August 2017.
 													</li>
 
 													<li>
-														A <b>gravitational wave</b> (GW) propagating between the Earth
-															and a pulsar will <b>stretch and squeeze</b>
-															space-time between them. This causes alternating
-															advances and delays of pulse arrival times with
-															respect to our model's predictions.
+														<b>Individual systems can teach us much</b>, such as that BBH
+														systems can form and merge within a Hubble time, and
+														that their GW emission can be directly detected. We
+														also learned that the emitted GW radiation was consistent
+														with Einstein's General Relativity Theory. Likewise,
+														the detection and electromagnetic follow-up of the DNS
+														system (GW170817) showed that NS mergers could explain
+														the origin of short gamma-ray bursts, gave insight into
+														the equation-of-state of nuclear matter, constrained
+														the graviton speed, and gave a measure of the Hubble
+														constant.
 													</li>
 
 													<li>
-														A <b>random background of GWs</b> will lead to apparent noise
-															in the pulsar arrival times, with power predominantly
-															at low frequencies. Such a background could come from many <b>inspiraling supermassive black-hole binaries</b> (SMBHBs),
-															a network of <b>cosmic strings</b>, or space-time fluctuations of <b>primordial origin</b>.
+														The <b>catalog of BBH mergers</b> span a range of masses,
+														distances, component spin-sky-locations, and sky-locations.
+														One of the first surprising aspects of these systems
+														is how massive they are, with the component BH masses
+														in GW150914 being around 30 times as big as the Sun.
 													</li>
 
 													<li>
-														While random, this background affects all pulsars in the
-															 Milky Way with <b>predictable correlations</b>. We leverage
-															 this signature, correlating the pulse times of arrival from our large arrays of pulsars, to search for
-															 the common influence of GWs, interpreting results
-															 in terms of potential sources.
+														Attention is now turning to <b>GW population inference</b>,
+														where we try to <b>mine the catalog of detections</b> to
+														understand typical <b>stellar evolutionary paths</b>,
+														<b>progenitor conditions</b>, and the fraction formed
+														in the <b>field versus dense stellar clusters</b>.
 													</li>
 
-												</ul>
-
-												<ul class="actions">
-													<li><a href="http://nanograv.org/research/" class="button medium">Read more</a></li>
 												</ul>
 
 											</div>
@@ -139,7 +143,7 @@
 							<!-- Section 1 -->
 								<section>
 									<header class="major">
-										<h2>The NANOGrav 11-year Data Set</h2>
+										<h2>Hierarchical Population Inference</h2>
 									</header>
 
 									<div class="row 200%">
@@ -147,46 +151,60 @@
 										<div class="6u 12u$(medium)">
 											<ul>
 												<li>
-													NANOGrav's <b>latest data release</b> contains radio-pulse times
-													of arrival (TOAs) and timing-models for <b>45 millisecond pulsars</b>.
-													Published in <a href="http://iopscience.iop.org/article/10.3847/1538-4365/aab5b0">The Astrophysical Journal Supplement Series, April 9th 2018</a>.
+													<b>Bayesian parameter estimation</b> on a single GW event requires
+													a choice of prior probabilities for the
+													different intrinsic and extrinsic parameters. The
+													<b>prior on parameters</b> such as component
+													masses, spin magnitudes/orientation, source redshift, etc.
+													should <b>follow from our existing knowledge of the population</b>.
+													However, the <b>standard safe-choice
+													is for priors to be weak and un-informative</b> (with
+													broad ranges), so that the resulting posterior distributions are
+													dominanted by data constraints.
 												</li>
 
 												<li>
-													The observations span <b>11.4 years</b>, from July 30, 2005,
-														to December 31, 2015. The pulsar with the longest baseline
-														is J1744-1134, with 11.37 years of observations.
-														The pulsar with the largest data volume is J1713+0747,
-														with 27,571 TOAs.
+													In <b>hierarchical population inference</b>, we take the posterior
+													samples from each event (usually from Markov Chain Monte Carlo
+													analysis) and correct for the influence of this interim
+													prior choice. This gets us back to the likelihood of each
+													event. We can then  <b>multiply all of these likelihoods together</b>,
+													and <b>constrain the entire cataloged population with a new prior</b>.
 												</li>
 
 												<li>
-													Observations were carried out using the 100-m Robert C.
-														Byrd <b>Green Bank Telescope</b> (GBT) of the
-														<a href="http://greenbankobservatory.org/telescopes/gbt/">Green Bank Observatory</a>,
-														and the 305-m William E. Gordon Telescope (<b>Arecibo</b>) of
-														<a href="http://outreach.naic.edu/ao/scientist-user-portal/">Arecibo Observatory</a>.
+													This new prior may have its own population parameters,
+													which are called <b>hyper-parameters</b>. These hyper-parameters
+													can describe things like the shape of the chirp-mass
+													distribution, the fraction of systems formed in the field
+													versus in dense stellar clusters, the <b>physical processes of
+													stellar evolution</b>, or <b>progenitor star conditions</b>.
 												</li>
 
 												<li>
-													In the sky map shown here, pulsar positions are marked by circles, with areas proportional to the number of TOAs in the dataset; the color scale indicates the timing baseline.
-													The <b>34 pulsars with baselines greater than 3 years</b>
-													have solid red edges. We use only these 34 in our searches
-													for a GW background.
+													The figure shown here is a <b>probabilistic graphical model</b>
+													illustrating the chain of conditional dependencies in
+													hierarchical population inference for LIGO. The strain
+													data is composed of signal and noise, where we assume
+													the noise is Gaussian and characterized by a power
+													spectral density. The data will be GW signals for each
+													event, with waveforms having <b>physical parameters which
+													we constrain with a population prior</b>. This population prior
+													constrains "features" in parameter distributions determined
+													from principal component analysis. The weights of these
+													features (and thus the prior distributions) depend on
+													<b>hyper-parameters like progenitor metallicity, BH natal
+													kick magnitude, and common-envelope hardening efficiency</b>.
 												</li>
 
-											</ul>
-
-											<ul class="actions">
-												<li><a href="https://arxiv.org/abs/1801.01837" class="button medium">Read data paper</a></li>
-												<li><a href="https://data.nanograv.org/" class="button medium">Download data</a></li>
 											</ul>
 
 										</div>
 
 										<div class="6u 12u$(medium)">
-											<span class="image fit"><img src="images/compas_results.png" alt="" /></span>
-												<p><b>Image</b>: sky map of NANOGrav pulsars.</p>
+											<span class="image fit"><img src="images/ligo_popsynth_pgm.png" alt="" /></span>
+												<p><b>Image</b>: Example probabilistic graphical model for LIGO
+													hierchical population inference.</p>
 										</div>
 
 									</div>
@@ -197,13 +215,13 @@
 								<!-- Section 2 -->
 									<section>
 										<header class="major">
-											<h2>Dependence of Results on Solar-System Ephemeris</h2>
+											<h2>Using Population Simulations To Train GW Parameter Priors</h2>
 										</header>
 
 										<div class="row 200%">
 
 											<div class="6u 12u$(medium)">
-												<span class="image fit"><img src="images/abse_trainingdata.png" alt="" /></span>
+												<span class="image fit"><img src="images/hierarchical_inference.png" alt="" /></span>
 													<p><b>Image</b>: Upper limit on a power-law stochastic background, as a function of spectral slope, and for different ephemeris choices.</p>
 
 											</div>
@@ -257,7 +275,7 @@
 									<!-- Section 3 -->
 										<section>
 											<header class="major">
-												<h2>Robust Upper Limits and Detection Statistics</h2>
+												<h2>Mining Catalogs With A Trained Population Prior</h2>
 											</header>
 
 											<div class="row 200%">
