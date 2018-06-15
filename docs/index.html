@@ -45,9 +45,13 @@
 										<p>Submitted to Physical Review D on ...</a>.
 										<p>
 											Catalogs of <b> stellar-mass compact binary systems</b> detected by
-											ground-based gravitational-wave instruments will offer insights
+											ground-based gravitational-wave instruments (such as
+											<a href="https://en.wikipedia.org/wiki/LIGO">LIGO</a> or
+											<a href="https://en.wikipedia.org/wiki/Virgo_interferometer">Virgo</a>)
+											will offer insights
 											into the <b>demographics of progenitor systems and the physics guiding
-											stellar evolution</b>. The masses of existing binary black-hole
+											<a href="https://en.wikipedia.org/wiki/Stellar_evolution">stellar evolution</a></b>.
+											The masses of existing binary black-hole
 											detections already imply that the metallicity of their progenitor
 											systems must have been sub-solar, and the combination of mass,
 											redshift, spin, and rate information from future detections will
@@ -58,14 +62,15 @@
 											probability distributions of progenitor metallicity, kick
 											parameters, and common-envelope efficiency. <b>We use a bank of
 											compact-binary population synthesis simulations to train a
-											Gaussian-process emulator</b> that acts as a prior on observed
+											<a href="https://en.wikipedia.org/wiki/Gaussian_process">Gaussian-process</a> emulator</b> that acts as a prior on observed
 											parameter distributions (e.g. chirp mass, redshift, rate).
 											This emulator slots into a hierarchical population inference
 											framework to <b>extract the underlying astrophysical origins of
 											systems detected by LIGO, Virgo, etc</b>. The method is fast,
 											easily expanded with additional simulations, and can be
 											adapted for training on arbitrary population synthesis codes,
-											and <b>detectors like LISA</b>.
+											and <b>detectors like
+												<a href="https://en.wikipedia.org/wiki/Laser_Interferometer_Space_Antenna">LISA</a></b>.
 										</p>
 										<ul class="actions">
 											<li><a href="https://arxiv.org/" class="button medium">Read paper</a></li>
@@ -96,8 +101,9 @@
 												<ul>
 													<li>
 														The <b>Advanced Laser Interferometer Gravitational-wave
-														Observatory (aLIGO)</b> has detected five binary black-hole
-														(BBH) mergers and one double neutron star (DNS) merger
+														Observatory (aLIGO)</b> has
+														<a href="https://en.wikipedia.org/wiki/List_of_gravitational_wave_observationsdetected">five binary black-hole
+														(BBH) mergers and one double neutron star (DNS) merger</a>
 														since becoming operational in 2015, with <b>Advanced
 														Virgo (AdvVirgo)</b> joining the hunt in August 2017.
 													</li>
@@ -109,7 +115,7 @@
 														also learned that the emitted GW radiation was consistent
 														with Einstein's General Relativity Theory. Likewise,
 														the detection and electromagnetic follow-up of the DNS
-														system (GW170817) showed that NS mergers could explain
+														system (<a href="https://en.wikipedia.org/wiki/GW170817">GW170817</a>) showed that NS mergers could explain
 														the origin of short gamma-ray bursts, gave insight into
 														the equation-of-state of nuclear matter, constrained
 														the graviton speed, and gave a measure of the Hubble
@@ -121,7 +127,7 @@
 														distances, component spin-sky-locations, and sky-locations.
 														One of the first surprising aspects of these systems
 														is how massive they are, with the component BH masses
-														in GW150914 being around 30 times as big as the Sun.
+														in <a href="https://en.wikipedia.org/wiki/GW150914">GW150914</a> being around 30 times as big as the Sun.
 													</li>
 
 													<li>
@@ -151,7 +157,7 @@
 										<div class="6u 12u$(medium)">
 											<ul>
 												<li>
-													<b>Bayesian parameter estimation</b> on a single GW event requires
+													<b><a href="https://en.wikipedia.org/wiki/Bayesian_inference">Bayesian parameter estimation</a></b> on a single GW event requires
 													a choice of prior probabilities for the
 													different intrinsic and extrinsic parameters. The
 													<b>prior on parameters</b> such as component
@@ -164,7 +170,7 @@
 												</li>
 
 												<li>
-													In <b>hierarchical population inference</b>, we take the posterior
+													In <b><a href="https://en.wikipedia.org/wiki/Bayesian_hierarchical_modeling">hierarchical population inference</a></b>, we take the posterior
 													samples from each event (usually from <b>Markov Chain Monte Carlo</b>
 													analysis) and correct for the influence of this interim
 													prior choice. This gets us back to the likelihood of each
@@ -174,7 +180,7 @@
 
 												<li>
 													This new prior may have its own population parameters,
-													which are called <b>hyper-parameters</b>. These hyper-parameters
+													which are called <b><a href="https://en.wikipedia.org/wiki/Hyperparameter">hyper-parameters</a></b>. These hyper-parameters
 													can describe things like the shape of the chirp-mass
 													distribution, the fraction of systems formed in the field
 													versus in dense stellar clusters, the <b>physical processes of
@@ -182,7 +188,7 @@
 												</li>
 
 												<li>
-													The figure shown here is a <b>probabilistic graphical model</b>
+													The figure shown here is a <b><a href="https://en.wikipedia.org/wiki/Graphical_model">probabilistic graphical model</a></b>
 													illustrating
 													hierarchical population inference for LIGO. The
 													signals will be gravitational-waveforms for each
@@ -191,8 +197,8 @@
 													constrains "features" in parameter distributions determined
 													from principal component analysis. The weights of these
 													features (and thus the parameter priors) depend on
-													<b>hyper-parameters like progenitor metallicity, BH natal
-													kick magnitude, and common-envelope hardening efficiency</b>.
+													<b>hyper-parameters like <a href="https://en.wikipedia.org/wiki/Metallicity">progenitor metallicity</a>, BH <a href="https://en.wikipedia.org/wiki/Pulsar_kick">natal
+													kick</a> magnitude, and <a href="https://en.wikipedia.org/wiki/Common_envelope">common-envelope</a> hardening efficiency</b>.
 												</li>
 
 											</ul>
@@ -257,7 +263,7 @@
 														distributions across
 														hyper-parameter space</b>, allowing us to <b>predict new distributions
 														without performing more costly simulations</b>. In practice,
-														we use principal-compoennt analysis (PCA) to <b>find characteristic
+														we use <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">principal-compoennt analysis (PCA)</a> to <b>find characteristic
 														"features" in these distributions</b>, then interpolate over these features.
 														<b>This drastically reduces the number of interpolants that we need
 														to train.</b>
@@ -265,8 +271,8 @@
 
 													<li>
 														There are various choices of interpolation schemes that
-														we could use, e.g. linear, spline, etc. We use <b>Gaussian
-														Process (GP) interpolation</b>, which treats the data as a
+														we could use, e.g. linear, spline, etc. We use <b><a href="https://en.wikipedia.org/wiki/Kriging">Gaussian
+														Process (GP) interpolation</a></b>, which treats the data as a
 														single random draw from a multi-variate Gaussian distribution.
 														We can use the data to learn the structure of the
 														correlation length-scales in hyper-parameter space. This allows
@@ -306,8 +312,8 @@
 														</li>
 
 														<li>
-															In <b>Figure 5</b> we trained on 3 publicly-available population
-															simulations at <b>different progenitor metallicities</b>. Our GP
+															In <b>Figure 5</b> we trained on 3 <a href="http://www.sr.bham.ac.uk/compas/data/">publicly-available population
+															simulations</a> at <b>different progenitor metallicities</b>. Our GP
 															emulator could then predict chirp-mass distirbutions at
 															different metallicites. In a <b>simple analysis of the current
 															LIGO-Virgo catalog</b>, we found that systems preferred a
