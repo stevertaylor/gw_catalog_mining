@@ -74,7 +74,7 @@
 									</div>
 									<span class="image object">
 										<img src="images/ligo_bhns_massplot.png" alt="" />
-										<b>Image credit:</b> LIGO-Virgo / Frank Elavsky / Northwestern)
+										<b>Figure 1:</b> Known stellar-mass compact objects [Credit: LIGO-Virgo / Frank Elavsky / Northwestern]
 									</span>
 								</section>
 
@@ -89,7 +89,7 @@
 
 											<div class="6u 12u$(medium)">
 												<span class="image fit"><img src="images/ligo_bbhs.png" alt="" /></span>
-												<p><b>Image</b>: Detected black-hole binaries [Credit: LSC/LIGO/Caltech/Sonoma State (Aurore Simonnet)]</p>
+												<p><b>Figure 2</b>: Detected black-hole binaries [Credit: LSC/LIGO/Caltech/Sonoma State (Aurore Simonnet)]</p>
 											</div>
 
 											<div class="6u 12u$(medium)">
@@ -165,7 +165,7 @@
 
 												<li>
 													In <b>hierarchical population inference</b>, we take the posterior
-													samples from each event (usually from Markov Chain Monte Carlo
+													samples from each event (usually from <b>Markov Chain Monte Carlo</b>
 													analysis) and correct for the influence of this interim
 													prior choice. This gets us back to the likelihood of each
 													event. We can then  <b>multiply all of these likelihoods together</b>,
@@ -183,16 +183,14 @@
 
 												<li>
 													The figure shown here is a <b>probabilistic graphical model</b>
-													illustrating the chain of conditional dependencies in
-													hierarchical population inference for LIGO. The strain
-													data is composed of signal and noise, where we assume
-													the noise is Gaussian and characterized by a power
-													spectral density. The data will be GW signals for each
+													illustrating
+													hierarchical population inference for LIGO. The
+													signals will be gravitational-waveforms for each
 													event, with waveforms having <b>physical parameters which
 													we constrain with a population prior</b>. This population prior
 													constrains "features" in parameter distributions determined
 													from principal component analysis. The weights of these
-													features (and thus the prior distributions) depend on
+													features (and thus the parameter priors) depend on
 													<b>hyper-parameters like progenitor metallicity, BH natal
 													kick magnitude, and common-envelope hardening efficiency</b>.
 												</li>
@@ -203,7 +201,7 @@
 
 										<div class="6u 12u$(medium)">
 											<span class="image fit"><img src="images/ligo_popsynth_pgm_v2.png" alt="" /></span>
-												<p><b>Image</b>: Example probabilistic graphical model for LIGO
+												<p><b>Figure 3</b>: Example probabilistic graphical model for LIGO
 													hierchical population inference.</p>
 										</div>
 
@@ -222,7 +220,7 @@
 
 											<div class="6u 12u$(medium)">
 												<span class="image fit"><img src="images/hierarchical_inference.png" alt="" /></span>
-													<p><b>Image</b>: We perform population synthesis simulations
+													<p><b>Figure 4</b>: We perform population synthesis simulations
 													of BBH systems initialized from different progenitor conditions
 													and evolutionary assumptions. We interpolate the resulting
 													parameter dsitributions as a function of these hyper-parameters
@@ -234,26 +232,48 @@
 
 												<ul>
 													<li>
-														Several approaches exist to perform hierarchical population
-														inference, and to work out the origins of LIGO detections.
-														Some use parametrized functions that attempt to capture
-														either the shape of the GW-parameter distributions, or encode
-														variations in the distributions as a function of population
-														hyper-parameters. Other approaches perform Bayesian model
-														selection on discrete grids of models from population
-														synthesis simulations.
+														Our approach to hierarchical population inference fuses
+														<b>agnostic modeling</b> (i.e. measuring bin-heights
+														in histograms of GW parameter distributions) with
+														physically-detailed compact-binary <b>population synthesis
+														simulations</b>.
 													</li>
 
 													<li>
-
+														We design a <b>program of population simulations</b> at <b>different
+														points in population hyper-parameter space</b>. Each simulation
+														produces a population of compact-binaries; we are interested
+														mostly in BBH systems, but this can apply to any population
+														or mixture of populations. These <b>synthesized BBH systems
+														are filtered for detectability</b> in LIGO-Virgo, which
+														will prefer closer and more massive systems.
 													</li>
 
 													<li>
-
-													</li>
+														We now have distributions of parameters of detectable
+														BBH systems for different progenitor star conditions,
+														evolutionary paths, etc. As illustrated here, we can
+														<b>interpolate the bin-heights (or pixel intensities) of these
+														distributions across
+														hyper-parameter space</b>, allowing us to <b>predict new distributions
+														without performing more costly simulations</b>. In practice,
+														we use principal-compoennt analysis (PCA) to <b>find characteristic
+														"features" in these distributions</b>, then interpolate over these features.
+														<b>This drastically reduces the number of interpolants that we need
+														to train.</b>
+ 													</li>
 
 													<li>
-
+														There are various choices of interpolation schemes that
+														we could use, e.g. linear, spline, etc. We use <b>Gaussian
+														Process (GP) interpolation</b>, which treats the data as a
+														single random draw from a multi-variate Gaussian distribution.
+														We can use the data to learn the structure of the
+														correlation length-scales in hyper-parameter space. This allows
+														us to interpolate and extrapolate. Crucially, we also
+														gain a measure of the <b>interpolation uncertainty</b>, which we
+														can include as additional sources of noise or uncertainty in
+														our population analysis.
 													</li>
 
 												</ul>
@@ -276,20 +296,44 @@
 
 													<ul>
 														<li>
-
+															Our interpolation over synthesized parameter distributions
+															gives us an <b>emulator of further simulation output</b>.
+															We have learned the connection between initial stellar
+															population conditions and the distributions of measured
+															GW parameters. <b>We can now predict new parameter distributions
+															and detection rates as a function of the physical processes
+															guiding stellar evolution or dynamical formation scenarios</b>.
 														</li>
 
 														<li>
-
+															In <b>Figure 5</b> we trained on 3 publicly-available population
+															simulations at <b>different progenitor metallicities</b>. Our GP
+															emulator could then predict chirp-mass distirbutions at
+															different metallicites. In a <b>simple analysis of the current
+															LIGO-Virgo catalog</b>, we found that systems preferred a
+															90% upper limit of <b>~20% solar metallicity</b>. The figure shows
+															the reconstructed intrinsic chirp-mass distribution implied
+															by different metallicity constraints.
 														</li>
 
 														<li>
-
+															For the analysis in <b>Figure 6</b>, we trained our GP interpolants
+															using a <b>custom program of 125 simulations</b> across <b>progenitor
+															metallicity, BH natal kick magnitude, and common-envelope
+															hardening efficiency</b>. Lower metallicity allows stars
+															to remain more massive throughout their evolution,
+															resulting in more massive BHs. This seems to be needed
+															to produce the massive BHs seen in LIGO's current catalog.
 														</li>
 
-														<li>
 
-														</li>
+
+														<span class="image fit"><img src="images/compas_results.png" alt="" /></span>
+														<p><b>Figure 5</b>: The different color lines show the
+															intrinsic chirp-mass distribution from three publicly-available
+														population simulations at different progenitor metallicities. The black dashed
+													and dotted lines show GP model reconstructions at metallicities from
+													a simple analysis of the current LIGO-Virgo catalog.</p>
 
 													</ul>
 
@@ -297,7 +341,26 @@
 
 												<div class="6u 12u$(medium)">
 													<span class="image fit"><img src="images/abse_results.png" alt="" /></span>
-													<p><b>Image</b>: </p>
+													<p><b>Figure 6</b>: Marginalized posterior probability distribution of
+													population hyper-parameters for a mock catalog of 100 BBH systems.
+													The true hyper-parmeters are indicated via red lines. </p>
+
+													<li>
+														For <b>Figure 6</b>, we tested our GP emulator within
+														a full hierarchical Bayesian pipeline, where we analyzed
+														a catalog of <b>100 BBH systems from
+														a simulation that was not included in the training process</b>.
+													</li>
+
+													<li>
+														In blue we used distribution and rate information
+														(marginalizing over poorly-constrained scaling
+														factors) to constrain the population, whereas in
+														orange we only used distribution information. Green used
+														a variant of the distribution and rate approach. <b>In all
+														cases our Bayesian probability distirbutions were completely
+														consistent with the true population conditions.</b>
+													</li>
 												</div>
 
 											</div>
