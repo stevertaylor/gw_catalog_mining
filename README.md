@@ -9,10 +9,10 @@ Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary S
 * jupyter
 * numpy
 * scipy
-* pyDOE
-* astropy
-* gwdet
-* george
+* [pyDOE](https://pythonhosted.org/pyDOE)
+* [astropy](http://www.astropy.org)
+* [gwdet](https://github.com/dgerosa/gwdet)
+* [george](https://george.readthedocs.io/en/latest)
 
 ### Optional
 
