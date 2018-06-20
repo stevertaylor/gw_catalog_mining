@@ -94,12 +94,12 @@ class model(object):
                     # ----------
                     if not self.interpErrors:
                         pdf = self.dataComp.rotate2full(np.array([self.interp[jj].predict(self.dataComp.pca_weights[jj,:],
-                                                                                          self.sampTrans.range2unit(10.0**p))[0][0]
+                                                                                          self.sampTrans.range2unit(np.atleast_2d(10.0**p)))[0][0]
                                                                   for jj in range(len(self.interp))]))
                     elif self.interpErrors:
                         if not self.interpHyperErrors:
                             pdf = self.dataComp.rotate2full(np.array([self.interp[jj].sample_conditional(self.dataComp.pca_weights[jj,:],
-                                                                                                         self.sampTrans.range2unit(10.0**p))
+                                                                                                         self.sampTrans.range2unit(np.atleast_2d(10.0**p)))
                                                                       for jj in range(len(self.interp))]).flatten())
                         elif self.interpHyperErrors:
                             # drawing new kernel hyperparameters from posterior
@@ -109,7 +109,7 @@ class model(object):
 
                             # sampling conditional, as before
                             pdf = self.dataComp.rotate2full(np.array([self.interp[jj].sample_conditional(self.dataComp.pca_weights[jj,:],
-                                                                                                         self.sampTrans.range2unit(10.0**p))
+                                                                                                         self.sampTrans.range2unit(np.atleast_2d(10.0**p)))
                                                                       for jj in range(len(self.interp))]).flatten())
 
                 elif self.interpType == 'gp2d':
