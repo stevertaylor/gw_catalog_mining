@@ -1,7 +1,7 @@
 # gw_catalog_mining
 Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary Stellar Evolution: A New Hierarchical Bayesian Framework" by [Stephen  Taylor](https://github.com/stevertaylor) and [Davide Gerosa](https://github.com/dgerosa).
 
-If you use this code for you research, please cite this paper.
+If you use this code for your research, please cite this paper.
 
 
 
