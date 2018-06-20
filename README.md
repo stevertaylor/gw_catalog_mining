@@ -1,7 +1,7 @@
 # gw_catalog_mining
 Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary Stellar Evolution: A New Hierarchical Bayesian Framework".
 
-Users can open the included `jupyter` notebook using by typing `jupyter notebook results_toymodel.ipynb` in a terminal.
+Users can open the included `jupyter` notebook using by typing `jupyter notebook results_toymodel.ipynb` in a terminal. Individual cells can be executed by pressing `Shift + Tab`.
 
 ## Requirements
 
