@@ -16,6 +16,6 @@ Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary S
 
 ### Optional
 
-* emcee [for sampling]
-* chainconsumer [for plotting marginalized posterior distributions]
-* tensorly [for multi-linear PCA tests]
+* [emcee](http://dfm.io/emcee/current/) [for sampling]
+* [chainconsumer](https://samreay.github.io/ChainConsumer) [for plotting marginalized posterior distributions]
+* [tensorly](http://tensorly.org/stable/index.html) [for multi-linear PCA tests]
