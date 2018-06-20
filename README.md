@@ -6,11 +6,11 @@ Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary S
 ### Essential
 
 The following 4 packages are essential, and can be downloaded as a bundle with [Anaconda](https://www.anaconda.com/distribution).
+
 * python
 * jupyter
 * numpy
 * scipy
-
 * [pyDOE](https://pythonhosted.org/pyDOE)
 * [astropy](http://www.astropy.org)
 * [gwdet](https://github.com/dgerosa/gwdet)
