@@ -1,1 +1,1 @@
-Source code for https://nanograv.github.io/11yr_stochastic_analysis.
+Source code for https://stevertaylor.github.io/gw_catalog_mining
