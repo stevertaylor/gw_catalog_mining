@@ -5,16 +5,17 @@ Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary S
 
 ### Essential
 
-python
-jupyter
-numpy
-scipy
-pyDOE
-astropy
-gwdet
-george
+* python
+* jupyter
+* numpy
+* scipy
+* pyDOE
+* astropy
+* gwdet
+* george
 
 ### Optional
-emcee [for sampling]
-chainconsumer [for plotting marginalized posterior distributions]
-tensorly [for multi-linear PCA tests]
+
+* emcee [for sampling]
+* chainconsumer [for plotting marginalized posterior distributions]
+* tensorly [for multi-linear PCA tests]
