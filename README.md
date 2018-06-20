@@ -1,5 +1,9 @@
 # gw_catalog_mining
-Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary Stellar Evolution: A New Hierarchical Bayesian Framework".
+Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary Stellar Evolution: A New Hierarchical Bayesian Framework" by [Stephen  Taylor](https://github.com/stevertaylor) and [Davide Gerosa](https://github.com/dgerosa).
+
+If you use this code for you research, please cite this paper.
+
+
 
 Users can open the included `jupyter` notebook using by typing `jupyter notebook results_toymodel.ipynb` in a terminal. Individual cells can be executed by pressing `Shift + Tab`.
 
