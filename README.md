@@ -1,16 +1,21 @@
 # gw_catalog_mining
 Code and examples for "Mining Gravitational-wave Catalogs To Understand Binary Stellar Evolution: A New Hierarchical Bayesian Framework".
 
+Users can open the included `jupyter` notebook using by typing `jupyter notebook results_toymodel.ipynb` in a terminal.
+
 ## Requirements
 
-### Essential
+### Core
 
-The following 4 packages are essential, and can be downloaded as a bundle with [Anaconda](https://www.anaconda.com/distribution).
+The following 4 packages are core, and can be downloaded as a bundle with [Anaconda](https://www.anaconda.com/distribution).
 
 * python
 * jupyter
 * numpy
 * scipy
+
+### Essential
+
 * [pyDOE](https://pythonhosted.org/pyDOE)
 * [astropy](http://www.astropy.org)
 * [gwdet](https://github.com/dgerosa/gwdet)
