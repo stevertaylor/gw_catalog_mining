@@ -5,7 +5,7 @@ If you use this code for your research, please cite this paper.
 
 
 
-Users can open the included `jupyter` notebook using by typing `jupyter notebook results_toymodel.ipynb` in a terminal. Individual cells can be executed by pressing `Shift + Tab`.
+Users can open the included `jupyter` notebook using by typing `jupyter notebook results_toymodel.ipynb` in a terminal. Individual cells can be executed by pressing `Shift + Enter`.
 
 ## Requirements
 
